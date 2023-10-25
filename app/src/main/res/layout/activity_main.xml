@@ -40,14 +40,15 @@
             android:background="@drawable/edittextstyle"/>
 
         <Button
+            android:theme="@style/Button.color"
             android:layout_marginTop="3dp"
             android:layout_width="160dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:background="@drawable/buttonstyle"
-            android:padding="1dp"
-            android:textScaleX="0.8"
-            style="@style/Button.color"
+            android:padding="0dp"
+            android:textScaleX="0.7"
+            android:backgroundTint="#1c0a0a"
             android:text="Sign IN" />
 
         <TextView
@@ -56,6 +57,7 @@
             android:text="Forgot Password?"
             android:layout_gravity="center"
             android:textColor="@color/white"/>
+
     </LinearLayout>
 
 

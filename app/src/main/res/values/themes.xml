@@ -14,6 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="Button.color" parent="ThemeOverlay.AppCompat">
-        <item name="colorAccent">#5F1313</item>
+        <item name="colorPrimary">#431a12</item>
     </style>
 </resources>
