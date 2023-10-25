@@ -1,100 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login3"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-
-
-    <LinearLayout
-        android:layout_weight="1"
+    android:background="#431a12">
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="200dp">
-        <ImageView
-            android:background="#3fff"
-            android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/login3"
+        android:layout_margin="8dp"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo2removebg1"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:orientation="vertical"
+            android:layout_marginTop="300dp">
+            <ImageView
+                android:background="#3fff"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo2removebg1"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
 
-        <EditText
-            android:layout_marginVertical="3dp"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textColorHint="#514E57"
-            android:hint="User Name"
-            android:background="@drawable/edittextstyle"/>
-        <EditText
-            android:layout_marginVertical="3dp"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textColorHint="#514E57"
-            android:hint="Password"
-            android:background="@drawable/edittextstyle"/>
+            <EditText
+                android:layout_marginVertical="3dp"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColorHint="#514E57"
+                android:hint="User Name"
+                android:background="@drawable/edittextstyle"/>
+            <EditText
+                android:layout_marginVertical="3dp"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColorHint="#514E57"
+                android:hint="Password"
+                android:background="@drawable/edittextstyle"/>
 
-        <Button
-            android:theme="@style/Button.color"
-            android:layout_marginTop="3dp"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:background="@drawable/buttonstyle"
-            android:padding="0dp"
-            android:textScaleX="0.7"
-            android:backgroundTint="#1c0a0a"
-            android:text="Sign IN" />
+            <Button
+                android:theme="@style/Button.color"
+                android:layout_marginTop="3dp"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonstyle"
+                android:padding="0dp"
+                android:textColor="@color/white"
+                android:textScaleX="0.7"
+                android:backgroundTint="#1c0a0a"
+                android:text="Sign IN" />
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:layout_gravity="center"
-            android:textColor="@color/white"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Problem ? "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:text="01123461600"
+                android:autoLink="phone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text=" | "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="it.developer@nhidcl.com"
+                android:textColorLink="@color/white"
+                android:autoLink="email"/>
+        </LinearLayout>
+
+
 
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_margin="3dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Problem ? "/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textColorLink="@color/white"
-            android:text="01123461600"
-            android:autoLink="phone"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text=" | "/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="it.developer@nhidcl.com"
-            android:textColorLink="@color/white"
-            android:autoLink="email"/>
-    </LinearLayout>
-
-
-
 </LinearLayout>
