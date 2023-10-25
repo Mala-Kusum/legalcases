@@ -9,12 +9,14 @@
 
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="200dp">
         <ImageView
-            android:layout_width="150dp"
+            android:background="#3fff"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:src="@drawable/logo2removebg1"
             android:layout_gravity="center"
@@ -58,6 +60,39 @@
             android:layout_gravity="center"
             android:textColor="@color/white"/>
 
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="3dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Problem ? "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            android:text="01123461600"
+            android:autoLink="phone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text=" | "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="it.developer@nhidcl.com"
+            android:textColorLink="@color/white"
+            android:autoLink="email"/>
     </LinearLayout>
 
 
