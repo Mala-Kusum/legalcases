@@ -11,16 +11,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:hint="filter By"/>
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="filter"/>
-        <EditText
+            android:hint=""/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="filter"/>
+            android:layout_height="40dp">
+
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

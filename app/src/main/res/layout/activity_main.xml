@@ -101,7 +101,5 @@
                 android:autoLink="email"/>
         </LinearLayout>
 
-
-
     </LinearLayout>
 </LinearLayout>

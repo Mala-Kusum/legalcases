@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Legal Cases</string>
+
+    <string-array name="filter">
+        <item>	SNO.	</item>
+        <item>	LIMBS NO	</item>
+        <item>	COURT	</item>
+        <item>	CASE NO	</item>
+        <item>	PETITIONER	</item>
+        <item>	RESPONDENT	</item>
+        <item>	CASE FILING DATE	</item>
+
+    </string-array>
 </resources>
