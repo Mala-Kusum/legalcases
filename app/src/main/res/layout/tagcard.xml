@@ -16,13 +16,13 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="85dp"
+            android:layout_width="83dp"
             android:layout_height="wrap_content"/>
         <ImageButton
             android:layout_margin="2dp"
             android:layout_width="10dp"
             android:layout_height="12dp"
-            android:src="@android:drawable/ic_notification_clear_all"/>
+            android:src="@android:drawable/btn_dialog"/>
     </LinearLayout>
 
 
