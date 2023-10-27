@@ -25,16 +25,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="LIMBS NO: "
                 />
             <TextView
-                android:id="@+id/department"
+                android:id="@+id/limbs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,14 +47,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="COURT: "
-                android:textSize="16dp"/>
+                android:textSize="16sp"/>
 
             <TextView
-                android:id="@+id/address"
+                android:id="@+id/court"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
 
 
@@ -68,15 +68,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="CASE NO: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/email"
-                android:autoLink="email"
+                android:id="@+id/caseno"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
         </LinearLayout>
 
@@ -90,15 +89,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="PETITIONER: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/phone"
-                android:autoLink="phone"
+                android:id="@+id/petitioner"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
@@ -112,15 +110,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="RESPONDENT: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/mobile"
-                android:autoLink="phone"
+                android:id="@+id/respondent"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
@@ -135,14 +132,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="CASE FILING DATE: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="phone"
+                android:id="@+id/casefilingdate"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
@@ -157,14 +154,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="BRIEF HISTORY: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="phone"
+                android:id="@+id/breifhistory"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
@@ -178,14 +175,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="STATUS HEAD: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="phone"
+                android:id="@+id/statushead"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
@@ -200,14 +197,14 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="NEXT HEARING DATE: "
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="phone"
+                android:id="@+id/nexthearingdate"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 />
 
         </LinearLayout>
