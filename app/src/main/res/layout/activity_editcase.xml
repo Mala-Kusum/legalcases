@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:backgroundTint="#AEA6CE"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginHorizontal="10dp"
-    app:cardElevation="5dp"
-    android:layout_marginVertical="10dp"
-    android:paddingVertical="5dp"
-    app:cardCornerRadius="10dp"
-    tools:ignore="MissingDefaultResource">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".editcase">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,13 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:textSize="16sp"/>
-            <ImageButton
-                android:scaleType="fitEnd"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:padding="1dp"
-                android:src="@android:drawable/ic_menu_edit"
-                android:backgroundTint="#3fff"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -216,6 +205,12 @@
                 />
 
         </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
