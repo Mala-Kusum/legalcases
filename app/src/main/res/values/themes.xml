@@ -16,4 +16,7 @@
     <style name="Button.color" parent="ThemeOverlay.AppCompat">
         <item name="colorPrimary">#431a12</item>
     </style>
+    <style name="Button.color2" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">#AEA6CE</item>
+    </style>
 </resources>
