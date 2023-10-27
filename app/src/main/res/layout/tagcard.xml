@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginHorizontal="10dp"
     app:cardElevation="5dp"
-    android:backgroundTint="@color/material_dynamic_neutral70"
+    android:backgroundTint="#f2f3f4"
     android:layout_marginVertical="5dp"
     android:paddingVertical="10dp"
     app:cardCornerRadius="130dp"
@@ -20,10 +20,11 @@
             android:layout_height="wrap_content"/>
         <ImageButton
             android:background="#3fff"
-            android:layout_margin="2dp"
-            android:layout_width="10dp"
+            android:layout_margin="3dp"
+            android:layout_width="12dp"
             android:layout_height="12dp"
-            android:src="@android:drawable/btn_dialog"/>
+            android:scaleType="fitXY"
+            android:src="@android:drawable/presence_offline"/>
     </LinearLayout>
 
 
