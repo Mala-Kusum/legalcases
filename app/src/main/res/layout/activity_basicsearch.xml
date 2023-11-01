@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/taglist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"/>
