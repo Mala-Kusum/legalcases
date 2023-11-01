@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Legal Cases</string>
+    <string name="limbs_no">LIMBS NO:</string>
+    <string name="court">COURT:</string>
+    <string name="case_no">CASE NO:</string>
+    <string name="petitioner">PETITIONER:</string>
+    <string name="respondent">RESPONDENT:</string>
+    <string name="case_filing_date">CASE FILING DATE:</string>
+    <string name="brief_history">BRIEF HISTORY:</string>
+    <string name="status_head">STATUS HEAD:</string>
+    <string name="next_hearing_date">NEXT HEARING DATE:</string>
+    <string name="save">Save</string>
 
     <string-array name="filter">
         <item>	SELECT	</item>

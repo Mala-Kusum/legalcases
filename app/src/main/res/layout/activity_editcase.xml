@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="8dp"
+    android:layout_margin="6dp"
     tools:context=".editcase">
     <ScrollView
         android:layout_width="match_parent"
@@ -20,25 +20,27 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp"
             >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                
                 android:textStyle="bold"
-                android:text="LIMBS NO: "
+                android:text="@string/limbs_no"
                 />
             <EditText
                 android:id="@+id/limbs"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"/>
+                android:maxLines="1"
+                android:inputType="number"
+                />
 
         </LinearLayout>
         <LinearLayout
@@ -46,24 +48,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="COURT: "
-                android:textSize="16sp"/>
+                android:text="@string/court"
+                />
 
             <EditText
                 android:id="@+id/court"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"/>
+                />
         </LinearLayout>
 
 
@@ -72,23 +74,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="CASE NO: "
-                android:textSize="16sp"
+                android:text="@string/case_no"
+                
                 />
             <EditText
                 android:id="@+id/caseno"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:maxLines="1"
+                android:inputType="number"
                 />
         </LinearLayout>
 
@@ -98,23 +101,23 @@
             android:orientation="vertical"
 
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="PETITIONER: "
-                android:textSize="16sp"
+                android:text="@string/petitioner"
+                
                 />
             <EditText
                 android:id="@+id/petitioner"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:maxLines="1"
                 />
 
         </LinearLayout>
@@ -123,23 +126,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="RESPONDENT: "
-                android:textSize="16sp"
+                android:text="@string/respondent"
+                
                 />
             <EditText
                 android:id="@+id/respondent"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:maxLines="1"
                 />
 
         </LinearLayout>
@@ -149,23 +152,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="CASE FILING DATE: "
-                android:textSize="16sp"
+                android:text="@string/case_filing_date"
+                
                 />
             <EditText
                 android:id="@+id/casefilingdate"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:maxLines="1"
+                android:inputType="datetime"
                 />
 
         </LinearLayout>
@@ -175,23 +179,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="BRIEF HISTORY: "
-                android:textSize="16sp"
+                android:text="@string/brief_history"
+                
                 />
             <EditText
                 android:id="@+id/breifhistory"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:inputType="textMultiLine"
                 />
 
         </LinearLayout>
@@ -200,23 +204,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="STATUS HEAD: "
-                android:textSize="16sp"
+                android:text="@string/status_head"
+                
                 />
             <EditText
                 android:id="@+id/statushead"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:maxLines="1"
                 />
 
         </LinearLayout>
@@ -226,31 +230,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/border"
-            android:padding="7.5dp"
-            android:layout_marginVertical="4.5dp"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="NEXT HEARING DATE: "
-                android:textSize="16sp"
+                android:text="@string/next_hearing_date"
+                
                 />
             <EditText
                 android:id="@+id/nexthearingdate"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="16sp"
+                android:maxLines="1"
+                android:inputType="date"
                 />
 
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginHorizontal="5dp"
             android:theme="@style/Button.color2"
-            android:text="Save"/>
+            android:text="@string/save"/>
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="50dp"
