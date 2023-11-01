@@ -6,11 +6,11 @@
     android:orientation="vertical"
     android:layout_margin="8dp"
     tools:context=".editcase">
-    <!--<ScrollView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </ScrollView>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -57,10 +57,11 @@
                 android:text="COURT: "
                 android:textSize="16sp"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/court"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"/>
         </LinearLayout>
@@ -81,10 +82,11 @@
                 android:text="CASE NO: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/caseno"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -106,10 +108,11 @@
                 android:text="PETITIONER: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/petitioner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -130,10 +133,11 @@
                 android:text="RESPONDENT: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/respondent"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -155,10 +159,11 @@
                 android:text="CASE FILING DATE: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/casefilingdate"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -180,10 +185,11 @@
                 android:text="BRIEF HISTORY: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/breifhistory"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -204,10 +210,11 @@
                 android:text="STATUS HEAD: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/statushead"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -229,10 +236,11 @@
                 android:text="NEXT HEARING DATE: "
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/nexthearingdate"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="16sp"
                 />
@@ -250,5 +258,6 @@
             android:backgroundTint="#AEA6CE"
             android:src="@android:drawable/ic_menu_delete"/>
     </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
