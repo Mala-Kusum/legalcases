@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <Spinner
+            android:id="@+id/filtertype"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:gravity="center"
@@ -36,6 +37,7 @@
             />
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="add case"
