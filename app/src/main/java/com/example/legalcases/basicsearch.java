@@ -15,6 +15,11 @@ import android.view.MenuInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.flexbox.AlignItems;
+import com.google.android.flexbox.FlexDirection;
+import com.google.android.flexbox.FlexWrap;
+import com.google.android.flexbox.FlexboxLayoutManager;
+import com.google.android.flexbox.JustifyContent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -39,9 +44,16 @@ public class basicsearch extends AppCompatActivity {
         list.add("breif history");
         list.add("case filing date");
 
+        FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(basicsearch.this);
+        layoutManager.setFlexDirection(FlexDirection.ROW);
+        layoutManager.setFlexWrap(FlexWrap.WRAP);
+        /*layoutManager.setAlignItems(AlignItems.FLEX_START);
+        layoutManager.setJustifyContent(JustifyContent.FLEX_START);*/
+        layoutManager.setJustifyContent(JustifyContent.FLEX_END);
+
         tagList = findViewById(R.id.taglist);
         tagList.setHasFixedSize(true);
-        tagList.setLayoutManager(new LinearLayoutManager(this));
+        tagList.setLayoutManager(layoutManager);
         tagList.setAdapter(adapt);
 
         filterType = findViewById(R.id.filtertype);
@@ -74,6 +86,14 @@ public class basicsearch extends AppCompatActivity {
         }*/
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.kebabmenu, menu);
+
+        return true;
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
