@@ -1,13 +1,18 @@
 package com.example.legalcases;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.ActionMenuItem;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.icu.text.CaseMap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -31,6 +36,7 @@ public class basicsearch extends AppCompatActivity {
     FloatingActionButton add;
     ArrayList<String> list,filtered;
     RecyclerView tagList;
+    ActionBar bar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +68,16 @@ public class basicsearch extends AppCompatActivity {
         filterType.setAdapter(ad);
 
         add=findViewById(R.id.add);
+
+        /*bar=getSupportActionBar();
+
+        try{
+            bar.setBackgroundDrawable(new ColorDrawable(1));
+        }
+        catch(Exception e){
+            Log.e("Exception", e.toString());
+        }*/
+
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override

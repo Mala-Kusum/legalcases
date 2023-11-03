@@ -35,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
+                android:text="1177347"
                 android:textSize="16sp"/>
             <ImageButton
                 android:scaleType="fitEnd"
@@ -62,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
+                android:text="HIGH COURT - ASSAM - GUWAHATI"
                 android:textSize="16sp"/>
         </LinearLayout>
 
@@ -83,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/caseno"
                 android:layout_marginHorizontal="8dp"
+                android:text="WP(C) 8847 / 2018"
                 android:textSize="16sp"
                 />
         </LinearLayout>
