@@ -9,6 +9,9 @@
     <string name="brief_history">BRIEF HISTORY:</string>
     <string name="status_head">STATUS HEAD:</string>
     <string name="next_hearing_date">NEXT HEARING DATE:</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">open drawer</string>
+    <string name="nav_close">close drawer</string>
     <string name="save">Save</string>
 
     <string-array name="filter">
@@ -21,10 +24,6 @@
         <item>	CASE FILING DATE	</item>
         <item> STATUS HEAD </item>
         <item> NEXT HEARING DATE </item>
-
     </string-array>
-    <string name="nav">Navigation Drawer</string>
-    <!-- to toggle the open close button of the navigation drawer -->
-    <string name="nav_open">Open</string>
-    <string name="nav_close">Close</string>
+
 </resources>

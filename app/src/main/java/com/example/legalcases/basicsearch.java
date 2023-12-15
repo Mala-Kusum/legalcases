@@ -30,6 +30,7 @@ import com.google.android.flexbox.JustifyContent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class basicsearch extends AppCompatActivity {
     ArrayAdapter<CharSequence> ad;
@@ -39,12 +40,12 @@ public class basicsearch extends AppCompatActivity {
     ArrayList<String> list,filtered;
     RecyclerView tagList;
     ActionBar bar;
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basicsearch);
-        DrawerLayout drawerLayout;
-        ActionBarDrawerToggle actionBarDrawerToggle;
 
         drawerLayout = findViewById(R.id.drawer);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
@@ -53,7 +54,7 @@ public class basicsearch extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
         // to make the Navigation drawer icon always appear on the action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         list = new ArrayList<>();
         adapt=new tAdapter(this,list);
@@ -129,11 +130,20 @@ public class basicsearch extends AppCompatActivity {
         /*if (id==android.R.id.home) {
             finish();
         }*/
-        if(item.getItemId()==R.id.item1){
+        if(item.getItemId()==R.id.iteml){
             Intent intent=new Intent(basicsearch.this,MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
-        return true;
+
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            if(item.getItemId()==R.id.item1){
+                Intent intent=new Intent(basicsearch.this,MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

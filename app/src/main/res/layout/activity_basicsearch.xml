@@ -278,12 +278,11 @@
             android:layout_marginBottom="10dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"/>
-        <com.google.android.material.navigation.NavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:menu="@menu/sidenavigation" />
+
     </RelativeLayout>
-
-
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/sidenavigation" />
 </androidx.drawerlayout.widget.DrawerLayout>
