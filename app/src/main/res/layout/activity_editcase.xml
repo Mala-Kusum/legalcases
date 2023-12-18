@@ -22,67 +22,13 @@
             android:background="@drawable/border"
             android:padding="6dp"
             android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                
-                android:textStyle="bold"
-                android:text="@string/limbs_no"
-                />
-            <EditText
-                android:id="@+id/limbs"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="number"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/court"
-                />
-
-            <EditText
-                android:id="@+id/court"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="@string/case_no"
-                
+
                 />
             <EditText
                 android:id="@+id/caseno"
@@ -94,6 +40,32 @@
                 android:inputType="number"
                 />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/title"
+                />
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:maxLines="1"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,11 +80,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@string/petitioner"
+                android:text="@string/projectName"
                 
                 />
             <EditText
-                android:id="@+id/petitioner"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:maxLines="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/RO"
+                
+                />
+            <EditText
+                android:id="@+id/respondent"
                 android:layout_width="match_parent"
                 android:layout_height="29dp"
                 android:padding="0dp"
@@ -129,22 +125,45 @@
             android:padding="6dp"
             android:layout_marginVertical="4dp"
             android:layout_marginHorizontal="5dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@string/respondent"
-                
-                />
-            <EditText
-                android:id="@+id/respondent"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
+                android:text="@string/courtName"
                 />
 
+            <EditText
+                android:id="@+id/court"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/courtType"
+                />
+
+            <EditText
+                android:id="@+id/courtType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -249,7 +268,6 @@
                 android:maxLines="1"
                 android:inputType="datetime"
                 />
-
         </LinearLayout>
         <Button
             android:layout_width="match_parent"

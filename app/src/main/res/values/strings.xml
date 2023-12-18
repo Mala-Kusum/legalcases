@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Legal Cases</string>
-    <string name="limbs_no">LIMBS NO:</string>
-    <string name="court">COURT:</string>
+    <string name="title">TITLE:</string>
+    <string name="courtName">COURT NAME:</string>
+    <string name="courtType">COURT TYPE:</string>
     <string name="case_no">CASE NO:</string>
-    <string name="petitioner">PETITIONER:</string>
-    <string name="respondent">RESPONDENT:</string>
+    <string name="projectName">PROJECT NAME:</string>
+    <string name="RO">HQ/RO :</string>
     <string name="case_filing_date">CASE FILING DATE:</string>
     <string name="brief_history">BRIEF HISTORY:</string>
     <string name="status_head">STATUS HEAD:</string>
@@ -17,12 +18,17 @@
     <string-array name="filter">
         <item>	SELECT	</item>
         <item>	LIMBS NO	</item>
-        <item>	COURT	</item>
+        <item> HQ/RO </item>
+        <item>	COURT TYPE</item>
         <item>	CASE NO	</item>
-        <item>	PETITIONER	</item>
-        <item>	RESPONDENT	</item>
+        <item> TITLE </item>
+        <item> PROJECT NAME</item>
+        <item> ADVOCATE/LAW FIRM</item>
         <item>	CASE FILING DATE	</item>
         <item> STATUS HEAD </item>
+        <item> TOTAL CLAIM AMOUNT </item>
+        <item> LAST HEARING DATE </item>
+        <item> CONCERNED LEGAL PROFESSIONAL OF NHIDCL </item>
         <item> NEXT HEARING DATE </item>
     </string-array>
 

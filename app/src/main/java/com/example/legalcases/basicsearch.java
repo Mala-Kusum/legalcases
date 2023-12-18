@@ -5,10 +5,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.ActionMenuItem;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -28,11 +30,12 @@ import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class basicsearch extends AppCompatActivity {
+public class basicsearch extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ArrayAdapter<CharSequence> ad;
     Spinner filterType;
     tAdapter adapt;
@@ -42,6 +45,9 @@ public class basicsearch extends AppCompatActivity {
     ActionBar bar;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    static final int i1=R.id.item1;
+    static final int i2=R.id.item2;
+    static final int i3=R.id.item3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +73,6 @@ public class basicsearch extends AppCompatActivity {
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(basicsearch.this);
         layoutManager.setFlexDirection(FlexDirection.ROW);
         layoutManager.setFlexWrap(FlexWrap.WRAP);
-        /*layoutManager.setAlignItems(AlignItems.FLEX_START);
-        layoutManager.setJustifyContent(JustifyContent.FLEX_START);*/
         layoutManager.setJustifyContent(JustifyContent.FLEX_END);
 
         tagList = findViewById(R.id.taglist);
@@ -83,16 +87,6 @@ public class basicsearch extends AppCompatActivity {
 
         add=findViewById(R.id.add);
 
-        /*bar=getSupportActionBar();
-
-        try{
-            bar.setBackgroundDrawable(new ColorDrawable(1));
-        }
-        catch(Exception e){
-            Log.e("Exception", e.toString());
-        }*/
-
-
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,20 +94,6 @@ public class basicsearch extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-        /*@Override
-        public boolean onOptionsItemSelected(MenuItem ){
-            int id = item.getItemId();
-            if (id==android.R.id.home) {
-                finish();
-            }
-            if(item.getItemId()==R.id.item1){
-                Intent intent=new Intent(basicsearch.this,MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
-            return true;
-        }*/
     }
 
     @Override
@@ -121,29 +101,30 @@ public class basicsearch extends AppCompatActivity {
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.kebabmenu, menu);
-
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        /*if (id==android.R.id.home) {
-            finish();
-        }*/
-        if(item.getItemId()==R.id.iteml){
-            Intent intent=new Intent(basicsearch.this,MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        }
 
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            if(item.getItemId()==R.id.item1){
-                Intent intent=new Intent(basicsearch.this,MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
+
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if(id==R.id.item1){
+            Intent intent=new Intent(basicsearch.this,MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 }
