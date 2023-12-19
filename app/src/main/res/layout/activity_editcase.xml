@@ -8,421 +8,450 @@
     android:layout_margin="6dp"
     tools:context=".editcase">
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomLayout">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_weight="1">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/case_no"
-
-                />
-            <EditText
-                android:id="@+id/caseno"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="number"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp"
-            >
-            <TextView
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/case_no"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/caseno"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/title"
-                />
-            <EditText
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="text"
-                />
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/next_hearing_date"
-
-                />
-            <EditText
-                android:id="@+id/nexthearingdate"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="datetime"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next_hearing_date"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/nexthearingdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="datetime"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/last_hearing_date"
-
-                />
-            <EditText
-                android:id="@+id/lasthearingdate"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="datetime"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_hearing_date"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/lasthearingdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="datetime"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/status_head"
-
-                />
-            <EditText
-                android:id="@+id/statushead"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                />
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_head"
+                    android:textStyle="bold"
 
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
+                    />
+
+                <EditText
+                    android:id="@+id/statushead"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/projectName"
-                
-                />
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
+
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/projectName"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/RO"
-                
-                />
-            <EditText
-                android:id="@+id/respondent"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                />
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RO"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/respondent"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/courtName"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/court"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/courtType"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/courtType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/legal_professiona"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/legalProffesional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="textMultiLine"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/office"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/officer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="textMultiLine"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/advocate_law_firm"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/advocate_firm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="textMultiLine"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_claim_amount"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/listed_for"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/listedfor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="textMultiLine"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brief_history"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/breifhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="textMultiLine"
+                    android:padding="0dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/case_filing_date"
+                    android:textStyle="bold"
+
+                    />
+
+                <EditText
+                    android:id="@+id/casefilingdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="datetime"
+                    android:maxLines="1"
+                    android:padding="0dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/courtName"
-                />
-
-            <EditText
-                android:id="@+id/court"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/courtType"
-                />
-
-            <EditText
-                android:id="@+id/courtType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/legal_professiona"
-                />
-            <EditText
-                android:id="@+id/legalProffesional"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:inputType="textMultiLine"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/office"
-                />
-            <EditText
-                android:id="@+id/officer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:inputType="textMultiLine"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/advocate_law_firm"
-                />
-            <EditText
-                android:id="@+id/advocate_firm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:inputType="textMultiLine"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/total_claim_amount"
-                />
-            <EditText
-                android:id="@+id/amount"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="number"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/listed_for"
-
-                />
-            <EditText
-                android:id="@+id/listedfor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:inputType="textMultiLine"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/brief_history"
-                
-                />
-            <EditText
-                android:id="@+id/breifhistory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:inputType="textMultiLine"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/case_filing_date"
-
-                />
-            <EditText
-                android:id="@+id/casefilingdate"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                android:inputType="datetime"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:id="@+id/bottomLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent">
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="5dp"
-            android:theme="@style/Button.color2"
-            android:text="@string/save"/>
+            android:text="@string/save"
+            android:theme="@style/Button.color2" />
+
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="50dp"
