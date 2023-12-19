@@ -14,6 +14,12 @@
     <string name="nav_open">open drawer</string>
     <string name="nav_close">close drawer</string>
     <string name="save">Save</string>
+    <string name="legal_professiona">CONCERNED LEGAL PROFESSIONAL FROM NHIDCL</string>
+    <string name="office">CONCERNED OFFICER OF NHIDCL</string>
+    <string name="advocate_law_firm">ADVOCATE/LAW FIRM</string>
+    <string name="total_claim_amount">TOTAL CLAIM AMOUNT</string>
+    <string name="last_hearing_date">LAST HEARING DATE</string>
+    <string name="listed_for">LISTED FOR:</string>
 
     <string-array name="filter">
         <item>	SELECT	</item>

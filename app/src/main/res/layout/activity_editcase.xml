@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="6dp"
     tools:context=".editcase">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,7 +67,81 @@
                 />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/next_hearing_date"
 
+                />
+            <EditText
+                android:id="@+id/nexthearingdate"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:maxLines="1"
+                android:inputType="datetime"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/last_hearing_date"
+
+                />
+            <EditText
+                android:id="@+id/lasthearingdate"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:maxLines="1"
+                android:inputType="datetime"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/status_head"
+
+                />
+            <EditText
+                android:id="@+id/statushead"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:maxLines="1"
+                />
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -165,7 +240,6 @@
                 android:layout_marginHorizontal="5dp"
                 />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -178,21 +252,111 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@string/case_filing_date"
-                
+                android:text="@string/legal_professiona"
                 />
             <EditText
-                android:id="@+id/casefilingdate"
+                android:id="@+id/legalProffesional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:inputType="textMultiLine"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/office"
+                />
+            <EditText
+                android:id="@+id/officer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:inputType="textMultiLine"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/advocate_law_firm"
+                />
+            <EditText
+                android:id="@+id/advocate_firm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:inputType="textMultiLine"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/total_claim_amount"
+                />
+            <EditText
+                android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="29dp"
                 android:padding="0dp"
                 android:layout_marginHorizontal="5dp"
                 android:maxLines="1"
-                android:inputType="datetime"
+                android:inputType="number"
                 />
-
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/listed_for"
 
+                />
+            <EditText
+                android:id="@+id/listedfor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:inputType="textMultiLine"
+                />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -230,37 +394,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="@string/status_head"
-                
+                android:text="@string/case_filing_date"
+
                 />
             <EditText
-                android:id="@+id/statushead"
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:padding="0dp"
-                android:layout_marginHorizontal="5dp"
-                android:maxLines="1"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/border"
-            android:padding="6dp"
-            android:layout_marginVertical="4dp"
-            android:layout_marginHorizontal="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/next_hearing_date"
-                
-                />
-            <EditText
-                android:id="@+id/nexthearingdate"
+                android:id="@+id/casefilingdate"
                 android:layout_width="match_parent"
                 android:layout_height="29dp"
                 android:padding="0dp"
@@ -268,7 +406,17 @@
                 android:maxLines="1"
                 android:inputType="datetime"
                 />
+
         </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -282,6 +430,5 @@
             android:backgroundTint="#AEA6CE"
             android:src="@android:drawable/ic_menu_delete"/>
     </LinearLayout>
-    </ScrollView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
