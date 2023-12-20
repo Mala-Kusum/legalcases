@@ -23,6 +23,7 @@ import android.widget.Spinner;
 import android.view.MenuInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.flexbox.AlignItems;
 import com.google.android.flexbox.FlexDirection;
@@ -35,7 +36,7 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class basicsearch extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class basicsearch extends AppCompatActivity {
     ArrayAdapter<CharSequence> ad;
     Spinner filterType;
     tAdapter adapt;
@@ -45,6 +46,7 @@ public class basicsearch extends AppCompatActivity implements NavigationView.OnN
     ActionBar bar;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    NavigationView nav;
     static final int i1=R.id.item1;
     static final int i2=R.id.item2;
     static final int i3=R.id.item3;
@@ -58,6 +60,7 @@ public class basicsearch extends AppCompatActivity implements NavigationView.OnN
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+        nav = findViewById(R.id.nav);
 
         // to make the Navigation drawer icon always appear on the action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -94,37 +97,29 @@ public class basicsearch extends AppCompatActivity implements NavigationView.OnN
                 startActivity(i);
             }
         });
+        nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if(item.getItemId()==R.id.item1){
+                    Toast.makeText(basicsearch.this, "item 1", Toast.LENGTH_SHORT).show();
+                }
+                return false;
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.kebabmenu, menu);
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id=item.getItemId();
-        if(id==R.id.item1){
-            Intent intent=new Intent(basicsearch.this,MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 
 }
