@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <Spinner
                 android:id="@+id/filtertype"
                 android:layout_width="match_parent"
@@ -25,6 +24,7 @@
                 android:layout_gravity="center"
                 android:hint="filter By"/>
             <SearchView
+                android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
