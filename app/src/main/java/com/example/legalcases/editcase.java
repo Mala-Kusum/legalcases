@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import java.util.Date;
 
 public class editcase extends AppCompatActivity {
-    EditText ed3;
+    EditText ed3,ed4;
     LinearLayout nh;
     public static Date dn;
     @SuppressLint("ClickableViewAccessibility")
@@ -23,21 +23,19 @@ public class editcase extends AppCompatActivity {
         setContentView(R.layout.activity_editcase);
         this.getSupportActionBar().hide();
         ed3 = findViewById(R.id.nexthearingdate);
+        ed4 = findViewById(R.id.lasthearingdate);
         nh = findViewById(R.id.nh);
-
-        /*ed3.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                DialogFragment newFragment = new DatePick(ed3);
-                newFragment.show(getSupportFragmentManager(), "datePicker");
-                return false;
-            }
-        });*/
         ed3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment newFragment = new DatePick(ed3);
+                newFragment.show(getSupportFragmentManager(), "datePicker");
+            }
+        });
+        ed4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DatePick(ed4);
                 newFragment.show(getSupportFragmentManager(), "datePicker");
             }
         });

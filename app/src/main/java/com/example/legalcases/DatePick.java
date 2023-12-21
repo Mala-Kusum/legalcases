@@ -32,6 +32,7 @@ public class DatePick extends DialogFragment implements DatePickerDialog.OnDateS
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         final Calendar c = Calendar.getInstance();
         c.set(year,month,dayOfMonth);
-        ed.setText(dayOfMonth + " - " + month + " - " + year);
+        int m=month+1;
+        ed.setText(dayOfMonth + " - " + m + " - " + year);
     }
 }
