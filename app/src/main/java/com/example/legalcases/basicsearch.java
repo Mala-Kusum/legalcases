@@ -77,23 +77,15 @@ public class basicsearch extends AppCompatActivity {
         add=findViewById(R.id.add);
         tagList = findViewById(R.id.taglist);
         list = new ArrayList<>();
-        adapt=new tAdapter(this,list);
         lt = new ArrayList<>();
-        int id = s.getContext()
+        adapt=new tAdapter(this,lt);
+        filterType = findViewById(R.id.filtertype);
+       /* int id = s.getContext()
                 .getResources()
                 .getIdentifier("android:id/search_src_text", null, null);
-        EditText sedit = (EditText) s.findViewById(id);
+        EditText sedit = (EditText) s.findViewById(id);*/
 
-        //s.setEnabled(false);
-        //s.setInputType(0);
-        sedit.setEnabled(false);
-
-
-
-        list.add("wgegerg");
-        list.add("case no.");
-        list.add("breif history");
-        list.add("case filing date");
+        s.setSubmitButtonEnabled(false);
 
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(basicsearch.this);
         layoutManager.setFlexDirection(FlexDirection.ROW);
@@ -105,7 +97,7 @@ public class basicsearch extends AppCompatActivity {
         tagList.setLayoutManager(layoutManager);
         tagList.setAdapter(adapt);
 
-        filterType = findViewById(R.id.filtertype);
+
         ad=ArrayAdapter.createFromResource(basicsearch.this,R.array.filter, android.R.layout.simple_spinner_item);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_item);
         filterType.setAdapter(ad);
@@ -126,47 +118,43 @@ public class basicsearch extends AppCompatActivity {
                 return false;
             }
         });
-
-        /*filterType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position!=0){
-                    //s.setEnabled(true);
-                    s.setSubmitButtonEnabled(true);
-                }
-                else{
-                    //s.setEnabled(false);
-                    //s.setInputType(0);
-                    s.setSubmitButtonEnabled(false);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //s.setEnabled(false);
-                //s.setInputType(0);
-                s.setSubmitButtonEnabled(false);
-            }
-        });*/
         filterType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(filterType.getSelectedItem().toString().equals("SELECTED")){
-                    sedit.setEnabled(false);
-                    sedit.setError("Select a filter type in the drop down first");
+                    /*sedit.setEnabled(false);
+                    sedit.setError("Select a filter type in the drop down first");*/
+                    s.setSubmitButtonEnabled(false);
                 }
                 else{
-                    sedit.setEnabled(true);
+                    //sedit.setEnabled(true);
+                    s.setSubmitButtonEnabled(true);
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                sedit.setEnabled(false);
-                sedit.setError("Select a filter type in the drop down first");
+                /*sedit.setEnabled(false);
+                sedit.setError("Select a filter type in the drop down first");*/
+                s.setSubmitButtonEnabled(false);
             }
         });
-        s.setOnClickListener(new View.OnClickListener() {
+        s.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Tag t = new Tag(filterType.getSelectedItem().toString(),query);
+                lt.add(t);
+                adapt.notifyDataSetChanged();
+
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        /*s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(filterType.getSelectedItem().toString().equals("SELECTED")){
@@ -174,7 +162,7 @@ public class basicsearch extends AppCompatActivity {
                     sedit.setError("Select a filter type in the drop down first");
                 }
             }
-        });
+        });*/
     }
 
     @Override

@@ -15,9 +15,9 @@ import java.util.ArrayList;
 
 public class tAdapter extends RecyclerView.Adapter<tAdapter.MyViewHolder> {
     Context context;
-    ArrayList<String> l;
+    ArrayList<Tag> l;
 
-    public tAdapter(Context context, ArrayList<String> l) {
+    public tAdapter(Context context, ArrayList<Tag> l) {
         this.context = context;
         this.l = l;
     }
@@ -37,7 +37,14 @@ public class tAdapter extends RecyclerView.Adapter<tAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull tAdapter.MyViewHolder holder, int position) {
-        holder.tag.setText(l.get(position));
+        holder.tag.setText(l.get(position).getFilter());
+        holder.deleteTag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                l.remove(holder.getAdapterPosition());
+                notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
