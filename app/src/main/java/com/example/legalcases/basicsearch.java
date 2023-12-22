@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.ActionMenuItem;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,11 +19,14 @@ import android.icu.text.CaseMap;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.view.MenuInflater;
@@ -58,6 +62,9 @@ public class basicsearch extends AppCompatActivity {
     static final int i1=R.id.item1;
     static final int i2=R.id.item2;
     static final int i3=R.id.item3;
+    CardView card;
+    Boolean f=false;
+    LinearLayout layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +80,8 @@ public class basicsearch extends AppCompatActivity {
         //initialising variables
         nav = findViewById(R.id.nav);
         s=findViewById(R.id.search);
+        card = findViewById(R.id.card);
+        layout = findViewById(R.id.layout);
         filterType = findViewById(R.id.filtertype);
         add=findViewById(R.id.add);
         tagList = findViewById(R.id.taglist);
@@ -135,6 +144,34 @@ public class basicsearch extends AppCompatActivity {
                 /*sedit.setEnabled(false);
                 sedit.setError("Select a filter type in the drop down first");*/
                 s.setSubmitButtonEnabled(false);
+            }
+        });
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(f){
+                    ViewGroup.LayoutParams params = layout.getLayoutParams();
+// Changes the height and width to the specified *pixels*
+                    params.height = 350;
+                    params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    layout.setLayoutParams(params);
+                    f=false;
+                }
+                else{
+                    /*ViewGroup.LayoutParams params = layout.getLayoutParams();
+// Changes the height and width to the specified *pixels*
+
+                    int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100 , getResources().getDisplayMetrics());
+
+                    layout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,height));
+                    f=true;*/
+                    ViewGroup.LayoutParams params = layout.getLayoutParams();
+// Changes the height and width to the specified *pixels*
+                    params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                    params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    layout.setLayoutParams(params);
+                    f=true;
+                }
             }
         });
         s.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
