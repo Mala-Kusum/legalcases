@@ -5,7 +5,7 @@
     <string name="courtType">COURT TYPE:</string>
     <string name="case_no">CASE NO:</string>
     <string name="projectName">PROJECT NAME:</string>
-    <string name="RO">HQ/RO :</string>
+    <string name="RO">HQ/RO:</string>
     <string name="case_filing_date">CASE FILING DATE:</string>
     <string name="brief_history">BRIEF HISTORY:</string>
     <string name="status_head">STATUS HEAD:</string>
@@ -14,11 +14,11 @@
     <string name="nav_open">open drawer</string>
     <string name="nav_close">close drawer</string>
     <string name="save">Save</string>
-    <string name="legal_professiona">CONCERNED LEGAL PROFESSIONAL FROM NHIDCL</string>
-    <string name="office">CONCERNED OFFICER OF NHIDCL</string>
-    <string name="advocate_law_firm">ADVOCATE/LAW FIRM</string>
-    <string name="total_claim_amount">TOTAL CLAIM AMOUNT IN RS.</string>
-    <string name="last_hearing_date">LAST HEARING DATE</string>
+    <string name="legal_professiona">CONCERNED LEGAL PROFESSIONAL FROM NHIDCL:</string>
+    <string name="office">CONCERNED OFFICER OF NHIDCL:</string>
+    <string name="advocate_law_firm">ADVOCATE/LAW FIRM:</string>
+    <string name="total_claim_amount">TOTAL CLAIM AMOUNT IN RS.:</string>
+    <string name="last_hearing_date">LAST HEARING DATE:</string>
     <string name="listed_for">LISTED FOR:</string>
 
     <string-array name="filter">
