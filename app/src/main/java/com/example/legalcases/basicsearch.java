@@ -47,7 +47,7 @@ public class basicsearch extends AppCompatActivity {
     Spinner filterType;
     tAdapter adapt;
     FloatingActionButton add;
-    ArrayList<String> list,filtered;
+    ArrayList<String> filtered;
     RecyclerView tagList;
     ActionBar bar;
     DrawerLayout drawerLayout;
@@ -76,9 +76,8 @@ public class basicsearch extends AppCompatActivity {
         filterType = findViewById(R.id.filtertype);
         add=findViewById(R.id.add);
         tagList = findViewById(R.id.taglist);
-        list = new ArrayList<>();
         lt = new ArrayList<>();
-        adapt=new tAdapter(this,lt);
+        adapt=new tAdapter(this, (ArrayList<Tag>) lt);
         filterType = findViewById(R.id.filtertype);
        /* int id = s.getContext()
                 .getResources()
@@ -86,7 +85,6 @@ public class basicsearch extends AppCompatActivity {
         EditText sedit = (EditText) s.findViewById(id);*/
 
         s.setSubmitButtonEnabled(false);
-
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(basicsearch.this);
         layoutManager.setFlexDirection(FlexDirection.ROW);
         layoutManager.setFlexWrap(FlexWrap.WRAP);

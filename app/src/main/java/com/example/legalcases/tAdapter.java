@@ -22,7 +22,7 @@ public class tAdapter extends RecyclerView.Adapter<tAdapter.MyViewHolder> {
         this.l = l;
     }
 
-    public void filterList(ArrayList<String> filterlist) {
+    public void filterList(ArrayList<Tag> filterlist) {
         l = filterlist;
         notifyDataSetChanged();
     }
