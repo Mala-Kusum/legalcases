@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="10dp"
     tools:context=".basicsearch">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -418,8 +418,8 @@
             android:contentDescription="add case"
             android:backgroundTint="#AEA6CE"
             android:src="@android:drawable/ic_input_add"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"/>
 
@@ -430,6 +430,5 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/navheader"
-        android:background="@color/mypurpule"
         app:menu="@menu/sidenavigation" />
 </androidx.drawerlayout.widget.DrawerLayout>
