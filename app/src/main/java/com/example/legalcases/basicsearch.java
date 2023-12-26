@@ -189,6 +189,17 @@ public class basicsearch extends AppCompatActivity {
                 return false;
             }
         });
+        Spinner spinner = (Spinner) nav.getMenu().findItem(R.id.navigation_drawer_item3).getActionView();
+        spinner.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,language));
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,language[position],Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
         /*s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,12 +211,12 @@ public class basicsearch extends AppCompatActivity {
         });*/
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.kebabmenu, menu);
         return true;
-    }
+    }*/
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
