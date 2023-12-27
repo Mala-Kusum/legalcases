@@ -47,8 +47,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class basicsearch extends AppCompatActivity {
-    ArrayAdapter<CharSequence> ad;
-    Spinner filterType;
+    ArrayAdapter<CharSequence> ad,ad2;
+    Spinner filterType,spinner;
     tAdapter adapt;
     FloatingActionButton add;
     ArrayList<String> filtered;
@@ -88,6 +88,9 @@ public class basicsearch extends AppCompatActivity {
         lt = new ArrayList<>();
         adapt=new tAdapter(this, (ArrayList<Tag>) lt);
         filterType = findViewById(R.id.filtertype);
+        spinner = (Spinner) nav.getMenu().findItem(R.id.item1).getActionView();
+        ad=ArrayAdapter.createFromResource(basicsearch.this,R.array.filter, android.R.layout.simple_spinner_item);
+        ad2 = ArrayAdapter.createFromResource(basicsearch.this,R.array.States,android.R.layout.simple_spinner_dropdown_item);
        /* int id = s.getContext()
                 .getResources()
                 .getIdentifier("android:id/search_src_text", null, null);
@@ -105,7 +108,7 @@ public class basicsearch extends AppCompatActivity {
         tagList.setAdapter(adapt);
 
 
-        ad=ArrayAdapter.createFromResource(basicsearch.this,R.array.filter, android.R.layout.simple_spinner_item);
+
         ad.setDropDownViewResource(android.R.layout.simple_spinner_item);
         filterType.setAdapter(ad);
 
@@ -189,12 +192,12 @@ public class basicsearch extends AppCompatActivity {
                 return false;
             }
         });
-        Spinner spinner = (Spinner) nav.getMenu().findItem(R.id.navigation_drawer_item3).getActionView();
-        spinner.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,language));
+
+        spinner.setAdapter(new ArrayAdapter<>());
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this,language[position],Toast.LENGTH_SHORT).show();
+                Toast.makeText(basicsearch.this,spinner.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {

@@ -4,12 +4,12 @@
     tools:ignore="HardcodedText">
 
     <item
-        android:id="@+id/item2"
+        android:id="@+id/item1"
         android:title="HQ/RO"
         android:icon="@drawable/baseline_travel_explore_24"
-        android:actionLayout=""/>
+        android:actionLayout="@layout/spinner"/>
     <item
-        android:id="@+id/item1"
+        android:id="@+id/item2"
         android:title="Dashboard"
         android:icon="@drawable/baseline_dashboard_24"/>
     <item
