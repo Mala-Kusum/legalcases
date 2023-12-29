@@ -20,6 +20,8 @@
     <string name="total_claim_amount">TOTAL CLAIM AMOUNT IN RS.:</string>
     <string name="last_hearing_date">LAST HEARING DATE:</string>
     <string name="listed_for">LISTED FOR:</string>
+    <string name="concerned_state">CONCERNED STATE:</string>
+    <string name="concerned_ro">CONCERNED RO:</string>
 
     <string-array name="filter">
         <item>	SELECT	</item>

@@ -193,8 +193,8 @@ public class basicsearch extends AppCompatActivity {
             }
         });
 
-        spinner.setAdapter(new ArrayAdapter<>());
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        //spinner.setAdapter(new ArrayAdapter<>());
+        /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(basicsearch.this,spinner.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
@@ -202,7 +202,7 @@ public class basicsearch extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        });
+        });*/
         /*s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

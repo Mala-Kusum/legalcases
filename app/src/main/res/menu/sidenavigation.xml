@@ -14,7 +14,7 @@
         android:icon="@drawable/baseline_dashboard_24"/>
     <item
         android:id="@+id/item3"
-        android:title="item3" />
+        android:title="Upcoming hearing of Cases" />
     <item
         android:id="@+id/logout"
         android:title="Log Out"/>
