@@ -97,18 +97,17 @@ public class basicsearch extends AppCompatActivity {
         EditText sedit = (EditText) s.findViewById(id);*/
 
         s.setSubmitButtonEnabled(false);
+        //FLEXIVLE LAYOUT FOR FILTER TAGS
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(basicsearch.this);
         layoutManager.setFlexDirection(FlexDirection.ROW);
         layoutManager.setFlexWrap(FlexWrap.WRAP);
         layoutManager.setJustifyContent(JustifyContent.FLEX_END);
 
-
         tagList.setHasFixedSize(true);
         tagList.setLayoutManager(layoutManager);
         tagList.setAdapter(adapt);
 
-
-
+        //SET FILTER TYPE SPINNER
         ad.setDropDownViewResource(android.R.layout.simple_spinner_item);
         filterType.setAdapter(ad);
 
@@ -149,6 +148,7 @@ public class basicsearch extends AppCompatActivity {
                 s.setSubmitButtonEnabled(false);
             }
         });
+        //EXPAND AND CONTRACT CASE CARD
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,15 +161,8 @@ public class basicsearch extends AppCompatActivity {
                     f=false;
                 }
                 else{
-                    /*ViewGroup.LayoutParams params = layout.getLayoutParams();
-// Changes the height and width to the specified *pixels*
-
-                    int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100 , getResources().getDisplayMetrics());
-
-                    layout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,height));
-                    f=true;*/
                     ViewGroup.LayoutParams params = layout.getLayoutParams();
-// Changes the height and width to the specified *pixels*
+                    // Changes the height and width to the specified *pixels*
                     params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
                     params.width = ViewGroup.LayoutParams.MATCH_PARENT;
                     layout.setLayoutParams(params);
@@ -177,6 +170,7 @@ public class basicsearch extends AppCompatActivity {
                 }
             }
         });
+        //SEARCHVIEW
         s.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -213,13 +207,7 @@ public class basicsearch extends AppCompatActivity {
             }
         });*/
     }
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.kebabmenu, menu);
-        return true;
-    }*/
+    //NAVIGATION DRAWER OPEN ON CLICK
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
