@@ -59,5 +59,22 @@
         <item> Haryana </item>
         <item> West Bengal </item>
     </string-array>
+    <string-array name="RO">
+        <item> "New Delhi" </item>
+        <item> "Ro-Leh/Srinagar" </item>
+        <item> "RO-Port Blair" </item>
+        <item> "RO-Agartala" </item>
+        <item> "RO-Aizwal" </item>
+        <item> "RO-Dehradun" </item>
+        <item> "RO-Gangtok" </item>
+        <item> "RO-Guwahati" </item>
+        <item> "RO-Imphal" </item>
+        <item> "RO-Itanagar" </item>
+        <item> "RO-Jammu" </item>
+        <item> "RO-Kohima" </item>
+        <item> "RO-LADAKH" </item>
+        <item> "RO-Shillong" </item>
+        <item> "RO-SRINAGAR" </item>
+    </string-array>
 
 </resources>
