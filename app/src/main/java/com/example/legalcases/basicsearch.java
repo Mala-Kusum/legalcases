@@ -90,7 +90,7 @@ public class basicsearch extends AppCompatActivity {
         filterType = findViewById(R.id.filtertype);
         spinner = (Spinner) nav.getMenu().findItem(R.id.item1).getActionView();
         ad=ArrayAdapter.createFromResource(basicsearch.this,R.array.filter, android.R.layout.simple_spinner_item);
-        ad2 = ArrayAdapter.createFromResource(basicsearch.this,R.array.States,android.R.layout.simple_spinner_dropdown_item);
+        ad2 = ArrayAdapter.createFromResource(basicsearch.this,R.array.RO,android.R.layout.simple_spinner_dropdown_item);
        /* int id = s.getContext()
                 .getResources()
                 .getIdentifier("android:id/search_src_text", null, null);
@@ -186,7 +186,6 @@ public class basicsearch extends AppCompatActivity {
                 return false;
             }
         });
-
         //spinner.setAdapter(new ArrayAdapter<>());
         /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

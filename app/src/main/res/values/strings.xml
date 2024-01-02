@@ -24,8 +24,6 @@
     <string name="concerned_ro">CONCERNED RO:</string>
 
     <string-array name="filter">
-        <item>	SELECT	</item>
-        <item>	LIMBS NO	</item>
         <item> HQ/RO </item>
         <item>	COURT TYPE</item>
         <item>	CASE NO	</item>
@@ -61,7 +59,7 @@
         <item> West Bengal </item>
     </string-array>
     <string-array name="RO">
-        <item> "New Delhi" </item>
+        <item> "HQ" </item>
         <item> "Ro-Leh/Srinagar" </item>
         <item> "RO-Port Blair" </item>
         <item> "RO-Agartala" </item>
