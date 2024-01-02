@@ -124,6 +124,11 @@ public class basicsearch extends AppCompatActivity {
                 if(item.getItemId()==R.id.item1){
                     Toast.makeText(basicsearch.this, "item 1", Toast.LENGTH_SHORT).show();
                 }
+                if(item.getItemId()==R.id.logout){
+                    Intent i = new Intent(basicsearch.this,MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }
                 return false;
             }
         });
